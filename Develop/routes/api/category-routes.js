@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     res.status(200).json(data);
   })
   .catch((err) => {
-    res.status(400).json(data);
+    res.status(400).json(err);
   })
 })
 
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     }
   })
   .catch((err) => {
-    res.status(400).json(data);
+    res.status(400).json(err);
   })
 });
 
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
     res.status(200).json(data);
   })
   .catch((err) => {
-    res.status(400).json(data);
+    res.status(400).json(err);
   })
 });
 
@@ -64,13 +64,13 @@ router.put('/:id', (req, res) => {
     res.status(200).json(data);
   })
   .catch((err) => {
-    res.status(400).json(data);
+    res.status(400).json(err);
   })
-
 });
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+
 });
 
 module.exports = router;
